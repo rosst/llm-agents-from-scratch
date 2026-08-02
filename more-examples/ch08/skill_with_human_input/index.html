@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://masfromscratch.com/more-examples/ch02/async_tools/">
+        <link rel="canonical" href="https://masfromscratch.com/more-examples/ch08/skill_with_human_input/">
       
       
-        <link rel="prev" href="../../">
-      
-      
-        <link rel="next" href="../multi_tool_registry/">
       
       
         
@@ -25,7 +21,7 @@
     
     
       
-        <title>Async Tools - LLM Agents From Scratch</title>
+        <title>HumanInputTool Inside a Skill — Meeting Notes Summarizer - LLM Agents From Scratch</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#async-tools" class="md-skip">
+        <a href="#humaninputtool-inside-a-skill-meeting-notes-summarizer" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Async Tools
+              HumanInputTool Inside a Skill — Meeting Notes Summarizer
             
           </span>
         </div>
@@ -265,12 +261,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -706,8 +700,6 @@
       
   
   
-    
-  
   
   
     
@@ -733,17 +725,14 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -765,13 +754,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -788,10 +777,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -808,11 +795,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -833,7 +820,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -848,37 +835,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Async Tools
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ch02/async_tools/" class="md-nav__link">
         
   
   
@@ -894,59 +854,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sync-vs-async-call-pattern-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sync vs Async — Call Pattern Comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -959,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi_tool_registry/" class="md-nav__link">
+      <a href="../../ch02/multi_tool_registry/" class="md-nav__link">
         
   
   
@@ -987,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pydantic_tool_validation/" class="md-nav__link">
+      <a href="../../ch02/pydantic_tool_validation/" class="md-nav__link">
         
   
   
@@ -3374,10 +3281,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#running-an-ollama-service" class="md-nav__link">
     <span class="md-ellipsis">
       
-        
+        Running an Ollama service
       
     </span>
   </a>
@@ -3385,21 +3292,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#running-the-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sync-vs-async-call-pattern-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sync vs Async — Call Pattern Comparison
+        Running the Skill
       
     </span>
   </a>
@@ -4147,25 +4043,27 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8-swhi-0001">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="async-tools">Async Tools<a class="anchor-link" href="#async-tools">¶</a></h1><p>This notebook demonstrates <code>AsyncSimpleFunctionTool</code> and
-<code>AsyncPydanticFunctionTool</code> — the async counterparts to the sync tools
-introduced in Chapter 2.</p>
-<p>Async tools wrap <code>async</code> functions and are invoked with <code>await</code>. They are
-the right choice whenever the underlying operation is I/O-bound (network
-calls, database queries, file reads), because they avoid blocking the
-event loop while waiting for a response.</p>
-<p>No LLM is involved — this is pure Chapter 2 tool mechanics.</p>
+<h1 id="humaninputtool-inside-a-skill-meeting-notes-summarizer">HumanInputTool Inside a Skill — Meeting Notes Summarizer<a class="anchor-link" href="#humaninputtool-inside-a-skill-meeting-notes-summarizer">¶</a></h1><p>This notebook shows that HITL is not only an agent-level concern — it can
+be embedded directly inside a reusable skill.</p>
+<p>The <code>meeting-notes-summarizer</code> skill uses <code>HumanInputTool</code> with constrained
+<code>choices</code> to ask the operator two questions before producing output:</p>
+<ol>
+<li><strong>Format</strong> — <code>bullet-points</code> or <code>prose</code></li>
+<li><strong>Level of detail</strong> — <code>brief</code> or <code>detailed</code></li>
+</ol>
+<p>Any agent that loads this skill gets the human-input behaviour automatically,
+without the caller knowing or configuring it.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c8-swhi-0002">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4194,29 +4092,27 @@ event loop while waiting for a response.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8-swhi-0003">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="asyncsimplefunctiontool"><code>AsyncSimpleFunctionTool</code><a class="anchor-link" href="#asyncsimplefunctiontool">¶</a></h2><p><code>AsyncSimpleFunctionTool</code> wraps any <code>async</code> function the same way
-<code>SimpleFunctionTool</code> wraps a sync one. Here we wrap a function that fetches
-the current weather temperature for a location from the
-<a href="https://open-meteo.com/">Open-Meteo API</a> — a free, no-auth endpoint.</p>
-<p>We use <code>asyncio.to_thread</code> to run the blocking <code>urllib</code> call off the main
-event loop, which is the standard pattern for wrapping sync I/O in async
-code without adding extra dependencies.</p>
+<h2 id="running-an-ollama-service">Running an Ollama service<a class="anchor-link" href="#running-an-ollama-service">¶</a></h2><p>To execute the code provided in this notebook, you'll need to have Ollama
+installed on your local machine and have its LLM hosting service running.
+To download Ollama, follow the instructions found on this page:
+<a href="https://ollama.com/download">https://ollama.com/download</a>. After downloading and installing Ollama, you
+can start a service by opening a terminal and running <code>ollama serve</code>.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c8-swhi-0004">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -4229,67 +4125,117 @@ code without adding extra dependencies.</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.error</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch.data_structures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ToolCall</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">AsyncSimpleFunctionTool</span>
 
+<span class="k">def</span><span class="w"> </span><span class="nf">ensure_ollama</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"http://localhost:11434"</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Start Ollama if not already running and wait until responsive."""</span>
 
-<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_temperature</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">longitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Fetch the current temperature (°C) for a lat/lon coordinate."""</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="s2">"https://api.open-meteo.com/v1/forecast"</span>
-        <span class="sa">f</span><span class="s2">"?latitude=</span><span class="si">{</span><span class="n">latitude</span><span class="si">}</span><span class="s2">&amp;longitude=</span><span class="si">{</span><span class="n">longitude</span><span class="si">}</span><span class="s2">"</span>
-        <span class="s2">"&amp;current_weather=true"</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_up</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">/api/tags"</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span> <span class="ne">ConnectionError</span><span class="p">,</span> <span class="ne">TimeoutError</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="n">_up</span><span class="p">():</span>
+        <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\u2713</span><span class="s2"> Ollama already running at </span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="n">ollama_path</span> <span class="o">=</span> <span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">"ollama"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ollama_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span> <span class="p">[</span>
+            <span class="s2">"/teamspace/studios/this_studio/.local/bin/ollama"</span><span class="p">,</span>
+            <span class="s2">"/usr/local/bin/ollama"</span><span class="p">,</span>
+            <span class="s2">"/usr/bin/ollama"</span><span class="p">,</span>
+        <span class="p">]:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">candidate</span><span class="p">):</span>
+                <span class="n">ollama_path</span> <span class="o">=</span> <span class="n">candidate</span>
+                <span class="k">break</span>
+    <span class="k">if</span> <span class="n">ollama_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="s2">"Could not find the ollama binary. Install with: "</span>
+            <span class="s2">"curl -fsSL https://ollama.com/install.sh | sh"</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Starting Ollama server (</span><span class="si">{</span><span class="n">ollama_path</span><span class="si">}</span><span class="s2">)..."</span><span class="p">)</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">ollama_path</span><span class="p">,</span> <span class="s2">"serve"</span><span class="p">],</span>
+        <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">DEVNULL</span><span class="p">,</span>
+        <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">DEVNULL</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>
-        <span class="n">url</span><span class="p">,</span>
-        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"User-Agent"</span><span class="p">:</span> <span class="s2">"llm-agents-from-scratch/1.0"</span><span class="p">},</span>
-    <span class="p">)</span>
-    <span class="n">raw</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
-        <span class="k">lambda</span><span class="p">:</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
-    <span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
-    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"current_weather"</span><span class="p">][</span><span class="s2">"temperature"</span><span class="p">]</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s2"> °C"</span>
+
+    <span class="n">deadline</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">timeout</span>
+    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">deadline</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">_up</span><span class="p">():</span>
+            <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\u2713</span><span class="s2"> Ollama up and running at </span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Ollama did not start within </span><span class="si">{</span><span class="n">timeout</span><span class="si">}</span><span class="s2">s"</span><span class="p">)</span>
 
 
-<span class="n">temperature_tool</span> <span class="o">=</span> <span class="n">AsyncSimpleFunctionTool</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">get_temperature</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tool name:  </span><span class="si">{</span><span class="n">temperature_tool</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tool desc:  </span><span class="si">{</span><span class="n">temperature_tool</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">use_cloud</span> <span class="o">=</span> <span class="s2">"OLLAMA_API_KEY"</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span>
+<span class="n">ensure_ollama</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">use_cloud</span> <span class="k">else</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\u2713</span><span class="s2"> Using Ollama Cloud"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">import asyncio
-import json
+<div class="clipboard-copy-txt" id="cell-2">import os
+import shutil
+import subprocess
+import time
+import urllib.error
 import urllib.request
 
-from llm_agents_from_scratch.data_structures import ToolCall
-from llm_agents_from_scratch.tools import AsyncSimpleFunctionTool
 
+def ensure_ollama(host="http://localhost:11434", timeout=15):
+    """Start Ollama if not already running and wait until responsive."""
 
-async def get_temperature(latitude: float, longitude: float) -&gt; str:
-    """Fetch the current temperature (°C) for a lat/lon coordinate."""
-    url = (
-        "https://api.open-meteo.com/v1/forecast"
-        f"?latitude={latitude}&amp;longitude={longitude}"
-        "&amp;current_weather=true"
+    def _up():
+        try:
+            urllib.request.urlopen(f"{host}/api/tags", timeout=1)
+            return True
+        except (urllib.error.URLError, ConnectionError, TimeoutError):
+            return False
+
+    if _up():
+        return print(f"\u2713 Ollama already running at {host}")
+
+    ollama_path = shutil.which("ollama")
+    if ollama_path is None:
+        for candidate in [
+            "/teamspace/studios/this_studio/.local/bin/ollama",
+            "/usr/local/bin/ollama",
+            "/usr/bin/ollama",
+        ]:
+            if os.path.exists(candidate):
+                ollama_path = candidate
+                break
+    if ollama_path is None:
+        raise RuntimeError(
+            "Could not find the ollama binary. Install with: "
+            "curl -fsSL https://ollama.com/install.sh | sh",
+        )
+
+    print(f"Starting Ollama server ({ollama_path})...")
+    subprocess.Popen(
+        [ollama_path, "serve"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
     )
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "llm-agents-from-scratch/1.0"},
-    )
-    raw = await asyncio.to_thread(
-        lambda: urllib.request.urlopen(req).read().decode(),
-    )
-    data = json.loads(raw)
-    temp = data["current_weather"]["temperature"]
-    return f"{temp} °C"
+
+    deadline = time.time() + timeout
+    while time.time() &lt; deadline:
+        if _up():
+            return print(f"\u2713 Ollama up and running at {host}")
+        time.sleep(0.5)
+
+    raise RuntimeError(f"Ollama did not start within {timeout}s")
 
 
-temperature_tool = AsyncSimpleFunctionTool(func=get_temperature)
-print(f"Tool name:  {temperature_tool.name}")
-print(f"Tool desc:  {temperature_tool.description}")</div>
+use_cloud = "OLLAMA_API_KEY" in os.environ
+ensure_ollama() if not use_cloud else print("\u2713 Using Ollama Cloud")</div>
 </div>
 </div>
 </div>
@@ -4301,21 +4247,20 @@ print(f"Tool desc:  {temperature_tool.description}")</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Tool name:  get_temperature
-Tool desc:  Fetch the current temperature (°C) for a lat/lon coordinate.
+<pre>✓ Using Ollama Cloud
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=22244ba6-7995-49c3-9323-bb82b3960167">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -4328,68 +4273,23 @@ Tool desc:  Fetch the current temperature (°C) for a lat/lon coordinate.
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># London: 51.5°N, -0.1°E</span>
-<span class="n">tool_call</span> <span class="o">=</span> <span class="n">ToolCall</span><span class="p">(</span>
-    <span class="n">tool_name</span><span class="o">=</span><span class="s2">"get_temperature"</span><span class="p">,</span>
-    <span class="n">arguments</span><span class="o">=</span><span class="p">{</span><span class="s2">"latitude"</span><span class="p">:</span> <span class="mf">51.5</span><span class="p">,</span> <span class="s2">"longitude"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">},</span>
-<span class="p">)</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">temperature_tool</span><span class="p">(</span><span class="n">tool_call</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"error:    </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">error</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"content:  </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="s2">"qwen3.5:397b-cloud"</span> <span class="k">if</span> <span class="n">use_cloud</span> <span class="k">else</span> <span class="s2">"qwen3:14b"</span>
+<span class="n">host</span> <span class="o">=</span> <span class="s2">"https://ollama.com"</span> <span class="k">if</span> <span class="n">use_cloud</span> <span class="k">else</span> <span class="kc">None</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3"># London: 51.5°N, -0.1°E
-tool_call = ToolCall(
-    tool_name="get_temperature",
-    arguments={"latitude": 51.5, "longitude": -0.1},
-)
-
-result = await temperature_tool(tool_call)
-print(f"error:    {result.error}")
-print(f"content:  {result.content}")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>error:    False
-content:  10.5 °C
-</pre>
+<div class="clipboard-copy-txt" id="cell-3">model = "qwen3.5:397b-cloud" if use_cloud else "qwen3:14b"
+host = "https://ollama.com" if use_cloud else None</div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="asyncpydanticfunctiontool"><code>AsyncPydanticFunctionTool</code><a class="anchor-link" href="#asyncpydanticfunctiontool">¶</a></h2><p><code>AsyncPydanticFunctionTool</code> is the async version of <code>PydanticFunctionTool</code>:
-the wrapped function must be <code>async</code> and must accept a single
-<code>pydantic.BaseModel</code> argument. Pydantic validates the incoming arguments
-before the function is called.</p>
-<p>Here we fetch sunrise and sunset times for a location from the
-<a href="https://sunrise-sunset.org/api">Sunrise-Sunset API</a> — also free and
-no-auth.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c8-swhi-0005">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -4402,111 +4302,43 @@ no-auth.</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">AsyncPydanticFunctionTool</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMAgent</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch.llms</span><span class="w"> </span><span class="kn">import</span> <span class="n">OllamaLLM</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch.logger</span><span class="w"> </span><span class="kn">import</span> <span class="n">enable_console_logging</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch.tools.default</span><span class="w"> </span><span class="kn">import</span> <span class="n">HumanInputTool</span>
 
+<span class="n">enable_console_logging</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">SunParams</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Parameters for the sunrise/sunset lookup tool."""</span>
-
-    <span class="n">latitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">"Latitude of the location."</span><span class="p">)</span>
-    <span class="n">longitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">"Longitude of the location."</span><span class="p">)</span>
-    <span class="n">date</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
-        <span class="n">description</span><span class="o">=</span><span class="s2">"Date in YYYY-MM-DD format. Use 'today' for today."</span><span class="p">,</span>
-    <span class="p">)</span>
-
-
-<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_sun_times</span><span class="p">(</span><span class="n">params</span><span class="p">:</span> <span class="n">SunParams</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Return sunrise and sunset times (UTC) for a given location and date."""</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="s2">"https://api.sunrise-sunset.org/json"</span>
-        <span class="sa">f</span><span class="s2">"?lat=</span><span class="si">{</span><span class="n">params</span><span class="o">.</span><span class="n">latitude</span><span class="si">}</span><span class="s2">&amp;lng=</span><span class="si">{</span><span class="n">params</span><span class="o">.</span><span class="n">longitude</span><span class="si">}</span><span class="s2">"</span>
-        <span class="sa">f</span><span class="s2">"&amp;date=</span><span class="si">{</span><span class="n">params</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2">&amp;formatted=0"</span>
-    <span class="p">)</span>
-    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>
-        <span class="n">url</span><span class="p">,</span>
-        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"User-Agent"</span><span class="p">:</span> <span class="s2">"llm-agents-from-scratch/1.0"</span><span class="p">},</span>
-    <span class="p">)</span>
-    <span class="n">raw</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
-        <span class="k">lambda</span><span class="p">:</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
-    <span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">raw</span><span class="p">)[</span><span class="s2">"results"</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span>
-        <span class="p">{</span><span class="s2">"sunrise"</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">"sunrise"</span><span class="p">],</span> <span class="s2">"sunset"</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">"sunset"</span><span class="p">]},</span>
-        <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-    <span class="p">)</span>
-
-
-<span class="n">sun_tool</span> <span class="o">=</span> <span class="n">AsyncPydanticFunctionTool</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">get_sun_times</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tool name:  </span><span class="si">{</span><span class="n">sun_tool</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tool desc:  </span><span class="si">{</span><span class="n">sun_tool</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">human_input_tool</span> <span class="o">=</span> <span class="n">HumanInputTool</span><span class="p">()</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">OllamaLLM</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">think</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">json_prompt_mode</span><span class="o">=</span><span class="n">use_cloud</span><span class="p">)</span>
+<span class="n">agent</span> <span class="o">=</span> <span class="n">LLMAgent</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span> <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">human_input_tool</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">from pydantic import BaseModel, Field
+<div class="clipboard-copy-txt" id="cell-4">import logging
 
-from llm_agents_from_scratch.tools import AsyncPydanticFunctionTool
+from llm_agents_from_scratch import LLMAgent
+from llm_agents_from_scratch.llms import OllamaLLM
+from llm_agents_from_scratch.logger import enable_console_logging
+from llm_agents_from_scratch.tools.default import HumanInputTool
 
+enable_console_logging(logging.INFO)
 
-class SunParams(BaseModel):
-    """Parameters for the sunrise/sunset lookup tool."""
-
-    latitude: float = Field(description="Latitude of the location.")
-    longitude: float = Field(description="Longitude of the location.")
-    date: str = Field(
-        description="Date in YYYY-MM-DD format. Use 'today' for today.",
-    )
-
-
-async def get_sun_times(params: SunParams) -&gt; str:
-    """Return sunrise and sunset times (UTC) for a given location and date."""
-    url = (
-        "https://api.sunrise-sunset.org/json"
-        f"?lat={params.latitude}&amp;lng={params.longitude}"
-        f"&amp;date={params.date}&amp;formatted=0"
-    )
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "llm-agents-from-scratch/1.0"},
-    )
-    raw = await asyncio.to_thread(
-        lambda: urllib.request.urlopen(req).read().decode(),
-    )
-    data = json.loads(raw)["results"]
-    return json.dumps(
-        {"sunrise": data["sunrise"], "sunset": data["sunset"]},
-        indent=2,
-    )
-
-
-sun_tool = AsyncPydanticFunctionTool(func=get_sun_times)
-print(f"Tool name:  {sun_tool.name}")
-print(f"Tool desc:  {sun_tool.description}")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Tool name:  get_sun_times
-Tool desc:  Return sunrise and sunset times (UTC) for a given location and date.
-</pre>
+human_input_tool = HumanInputTool()
+llm = OllamaLLM(host=host, model=model, think=False, json_prompt_mode=use_cloud)
+agent = LLMAgent(llm=llm, tools=[human_input_tool])</div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c8-swhi-0006">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
@@ -4519,68 +4351,100 @@ Tool desc:  Return sunrise and sunset times (UTC) for a given location and date.
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Tokyo: 35.7°N, 139.7°E</span>
-<span class="n">tool_call</span> <span class="o">=</span> <span class="n">ToolCall</span><span class="p">(</span>
-    <span class="n">tool_name</span><span class="o">=</span><span class="s2">"get_sun_times"</span><span class="p">,</span>
-    <span class="n">arguments</span><span class="o">=</span><span class="p">{</span><span class="s2">"latitude"</span><span class="p">:</span> <span class="mf">35.7</span><span class="p">,</span> <span class="s2">"longitude"</span><span class="p">:</span> <span class="mf">139.7</span><span class="p">,</span> <span class="s2">"date"</span><span class="p">:</span> <span class="s2">"today"</span><span class="p">},</span>
-<span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">TRANSCRIPT</span> <span class="o">=</span> <span class="s2">"""</span><span class="se">\</span>
+<span class="s2">Sprint 14 Planning — 2026-06-27</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">sun_tool</span><span class="p">(</span><span class="n">tool_call</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"error:    </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">error</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"content:</span><span class="se">\n</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="s2">Attendees: Priya (PM), Marcus (Lead Eng), Leila (Backend),</span>
+<span class="s2">Tom (Frontend), Ana (QA)</span>
+
+<span class="s2">Priya opened by reviewing Sprint 13 velocity: 42 points delivered against a</span>
+<span class="s2">target of 45. Two stories were rolled over — the pagination refactor (8 pts)</span>
+<span class="s2">and the email digest feature (5 pts). Both are high priority for Sprint 14.</span>
+
+<span class="s2">Marcus flagged a dependency risk: the pagination refactor depends on a database</span>
+<span class="s2">migration scheduled for next Tuesday. If the migration slips, the refactor</span>
+<span class="s2">cannot be merged. The team agreed to move the migration to Monday to de-risk.</span>
+
+<span class="s2">Leila volunteered to pick up the email digest feature and estimated three days</span>
+<span class="s2">of backend work. Tom said he'd need one day of frontend work once Leila's API</span>
+<span class="s2">is ready. Ana will write the test plan today so it's ready for review by</span>
+<span class="s2">Wednesday.</span>
+
+<span class="s2">Sprint 14 commitments (44 points total):</span>
+<span class="s2">- Pagination refactor: 8 pts — Marcus, Leila</span>
+<span class="s2">- Email digest: 5 pts — Leila, Tom</span>
+<span class="s2">- Auth token refresh: 3 pts — Leila</span>
+<span class="s2">- Dashboard chart improvements: 13 pts — Tom</span>
+<span class="s2">- Automated regression suite: 8 pts — Ana</span>
+<span class="s2">- Performance monitoring alerts: 7 pts — Marcus</span>
+
+<span class="s2">Priya reminded the team that the release is scheduled for July 11. All Sprint 14</span>
+<span class="s2">work must be merged and QA-approved by July 9.</span>
+
+<span class="s2">Meeting closed at 10:24.</span>
+<span class="s2">"""</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5"># Tokyo: 35.7°N, 139.7°E
-tool_call = ToolCall(
-    tool_name="get_sun_times",
-    arguments={"latitude": 35.7, "longitude": 139.7, "date": "today"},
-)
+<div class="clipboard-copy-txt" id="cell-5">TRANSCRIPT = """\
+Sprint 14 Planning — 2026-06-27
 
-result = await sun_tool(tool_call)
-print(f"error:    {result.error}")
-print(f"content:\n{result.content}")</div>
+Attendees: Priya (PM), Marcus (Lead Eng), Leila (Backend),
+Tom (Frontend), Ana (QA)
+
+Priya opened by reviewing Sprint 13 velocity: 42 points delivered against a
+target of 45. Two stories were rolled over — the pagination refactor (8 pts)
+and the email digest feature (5 pts). Both are high priority for Sprint 14.
+
+Marcus flagged a dependency risk: the pagination refactor depends on a database
+migration scheduled for next Tuesday. If the migration slips, the refactor
+cannot be merged. The team agreed to move the migration to Monday to de-risk.
+
+Leila volunteered to pick up the email digest feature and estimated three days
+of backend work. Tom said he'd need one day of frontend work once Leila's API
+is ready. Ana will write the test plan today so it's ready for review by
+Wednesday.
+
+Sprint 14 commitments (44 points total):
+- Pagination refactor: 8 pts — Marcus, Leila
+- Email digest: 5 pts — Leila, Tom
+- Auth token refresh: 3 pts — Leila
+- Dashboard chart improvements: 13 pts — Tom
+- Automated regression suite: 8 pts — Ana
+- Performance monitoring alerts: 7 pts — Marcus
+
+Priya reminded the team that the release is scheduled for July 11. All Sprint 14
+work must be merged and QA-approved by July 9.
+
+Meeting closed at 10:24.
+"""</div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>error:    False
-content:
-{
-  "sunrise": "2026-05-07T19:40:56+00:00",
-  "sunset": "2026-05-08T09:34:30+00:00"
-}
-</pre>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c26a7c2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="sync-vs-async-call-pattern-comparison">Sync vs Async — Call Pattern Comparison<a class="anchor-link" href="#sync-vs-async-call-pattern-comparison">¶</a></h2><p>The only difference at the call site is <code>await</code>. The <code>ToolCall</code> object and
-<code>ToolCallResult</code> shape are identical, which is what will allow <code>LLMAgent</code> to
-handle both tool types transparently.</p>
+<h2 id="running-the-skill">Running the Skill<a class="anchor-link" href="#running-the-skill">¶</a></h2><p>When the agent activates the <code>meeting-notes-summarizer</code> skill, it will pause
+twice to collect your preferences via <code>HumanInputTool</code>:</p>
+<ol>
+<li><strong>Format</strong> — <code>bullet-points</code> or <code>prose</code></li>
+<li><strong>Detail level</strong> — <code>brief</code> or <code>detailed</code></li>
+</ol>
+<p>The summary is then generated according to your choices.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c8-swhi-0007">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
@@ -4593,57 +4457,17 @@ handle both tool types transparently.</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">llm_agents_from_scratch.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleFunctionTool</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">hailstone_step_func</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Perform a single step of the Hailstone (Collatz) sequence."""</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-
-
-<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">async_hailstone_step_func</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Perform a single step of the Hailstone (Collatz) sequence."""</span>
-    <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="n">hailstone_step_func</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-
-
-<span class="n">sync_tool</span> <span class="o">=</span> <span class="n">SimpleFunctionTool</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">hailstone_step_func</span><span class="p">)</span>
-<span class="n">async_tool</span> <span class="o">=</span> <span class="n">AsyncSimpleFunctionTool</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">async_hailstone_step_func</span><span class="p">)</span>
-
-<span class="n">tool_call</span> <span class="o">=</span> <span class="n">ToolCall</span><span class="p">(</span><span class="n">tool_name</span><span class="o">=</span><span class="s2">"hailstone_step_func"</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">{</span><span class="s2">"x"</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
-
-<span class="n">sync_result</span> <span class="o">=</span> <span class="n">sync_tool</span><span class="p">(</span><span class="n">tool_call</span><span class="p">)</span>  <span class="c1"># sync — no await</span>
-<span class="n">async_result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">async_tool</span><span class="p">(</span><span class="n">tool_call</span><span class="p">)</span>  <span class="c1"># async — requires await</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"sync  result: </span><span class="si">{</span><span class="n">sync_result</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">  (error=</span><span class="si">{</span><span class="n">sync_result</span><span class="o">.</span><span class="n">error</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"async result: </span><span class="si">{</span><span class="n">async_result</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">  (error=</span><span class="si">{</span><span class="n">async_result</span><span class="o">.</span><span class="n">error</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">agent</span><span class="o">.</span><span class="n">run_with_skill</span><span class="p">(</span>
+    <span class="s2">"meeting-notes-summarizer"</span><span class="p">,</span>
+    <span class="n">prompt</span><span class="o">=</span><span class="sa">f</span><span class="s2">"Summarise the following meeting transcript:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">TRANSCRIPT</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">from llm_agents_from_scratch.tools import SimpleFunctionTool
-
-
-def hailstone_step_func(x: int) -&gt; int:
-    """Perform a single step of the Hailstone (Collatz) sequence."""
-    if x % 2 == 0:
-        return x // 2
-    return 3 * x + 1
-
-
-async def async_hailstone_step_func(x: int) -&gt; int:
-    """Perform a single step of the Hailstone (Collatz) sequence."""
-    return await asyncio.to_thread(hailstone_step_func, x)
-
-
-sync_tool = SimpleFunctionTool(func=hailstone_step_func)
-async_tool = AsyncSimpleFunctionTool(func=async_hailstone_step_func)
-
-tool_call = ToolCall(tool_name="hailstone_step_func", arguments={"x": 12})
-
-sync_result = sync_tool(tool_call)  # sync — no await
-async_result = await async_tool(tool_call)  # async — requires await
-
-print(f"sync  result: {sync_result.content}  (error={sync_result.error})")
-print(f"async result: {async_result.content}  (error={async_result.error})")</div>
+<div class="clipboard-copy-txt" id="cell-6">result = await agent.run_with_skill(
+    "meeting-notes-summarizer",
+    prompt=f"Summarise the following meeting transcript:\n\n{TRANSCRIPT}",
+)
+print(result.content)</div>
 </div>
 </div>
 </div>
@@ -4655,8 +4479,138 @@ print(f"async result: {async_result.content}  (error={async_result.error})")</di
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>sync  result: 6  (error=False)
-async result: 6  (error=False)
+<pre>INFO (llm_agents_fs.LLMAgent) :      🚀 Starting task: This is a user-explicit skill activation. Call the from_scratch__use_skill tool with name='meeting-notes-summarizer'. Use exactly thi...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      ⚙️ Processing Step: This is a user-explicit skill activation. Call the from_scratch__use_skill tool with name='meeting-notes-summarizer'. Use exactly ...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      🛠️ Executing Tool Call: from_scratch__use_skill
+INFO (llm_agents_fs.TaskHandler) :      ✅ Successful Tool Call: &lt;skill_content name="meeting-notes-summarizer"&gt;
+# Meeting Notes Summarizer
+
+Produce a summary of a meeting transcript provided...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      ✅ Step Result: I need to make the following tool-calls:
+{
+    "id_": "0c458dea-bfae-4fb6-8643-32ce2e4dc870",
+    "tool_name": "from_scratch__human_inp...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      🧠 New Step: Execute the tool call to from_scratch__human_input with the prompt 'What format would you like the summary in?' and choices ['bullet-point...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      ⚙️ Processing Step: Execute the tool call to from_scratch__human_input with the prompt 'What format would you like the summary in?' and choices ['bull...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      🛠️ Executing Tool Call: from_scratch__human_input
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #808000; text-decoration-color: #808000">╭────────────────────────────────────────────────── Human Input ──────────────────────────────────────────────────╮</span>
+<span style="color: #808000; text-decoration-color: #808000">│</span> What format would you like the summary in?                                                                      <span style="color: #808000; text-decoration-color: #808000">│</span>
+<span style="color: #808000; text-decoration-color: #808000">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">&gt; <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">[bullet-points/prose]</span>: </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>INFO (llm_agents_fs.TaskHandler) :      ✅ Successful Tool Call: bullet-points
+INFO (llm_agents_fs.TaskHandler) :      ✅ Step Result: I need to make the following tool-calls:
+{
+    "id_": "d1ccfed2-e10f-4afb-8e0b-094123909b89",
+    "tool_name": "from_scratch__human_inp...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      🧠 New Step: Execute the tool call to from_scratch__human_input with the prompt 'What level of detail?' and choices ['brief', 'detailed'] as specified ...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      ⚙️ Processing Step: Execute the tool call to from_scratch__human_input with the prompt 'What level of detail?' and choices ['brief', 'detailed'] as sp...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      🛠️ Executing Tool Call: from_scratch__human_input
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #808000; text-decoration-color: #808000">╭────────────────────────────────────────────────── Human Input ──────────────────────────────────────────────────╮</span>
+<span style="color: #808000; text-decoration-color: #808000">│</span> What level of detail?                                                                                           <span style="color: #808000; text-decoration-color: #808000">│</span>
+<span style="color: #808000; text-decoration-color: #808000">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">&gt; <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">[brief/detailed]</span>: </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>INFO (llm_agents_fs.TaskHandler) :      ✅ Successful Tool Call: detailed
+INFO (llm_agents_fs.TaskHandler) :      ✅ Step Result: I now have both preferences from the user:
+- Format preference: **bullet-points**
+- Detail preference: **detailed**
+
+According to the s...[TRUNCATED]
+INFO (llm_agents_fs.TaskHandler) :      No new step required.
+INFO (llm_agents_fs.LLMAgent) :      🏁 Task completed: I now have both preferences from the user:
+- Format preference: **bullet-points**
+- Detail preference: **detailed**
+
+According to th...[TRUNCATED]
+I now have both preferences from the user:
+- Format preference: **bullet-points**
+- Detail preference: **detailed**
+
+According to the skill instructions, for "bullet-points + detailed", I need to produce structured bullet points with sub-bullets covering all discussion topics, decisions, and action items.
+
+Let me summarize the meeting transcript accordingly:
+
+---
+
+## Sprint 14 Planning Meeting Summary — 2026-06-27
+
+### Meeting Overview
+- **Attendees**: Priya (PM), Marcus (Lead Eng), Leila (Backend), Tom (Frontend), Ana (QA)
+- **Meeting closed**: 10:24
+
+### Sprint 13 Review
+- **Velocity**: 42 points delivered against a target of 45
+- **Rolled over stories**:
+  - Pagination refactor (8 pts)
+  - Email digest feature (5 pts)
+- Both rolled-over stories are high priority for Sprint 14
+
+### Key Discussion Topics &amp; Decisions
+- **Dependency Risk Identified**:
+  - Pagination refactor depends on a database migration scheduled for next Tuesday
+  - Risk: If migration slips, the refactor cannot be merged
+  - **Decision**: Move migration to Monday to de-risk
+
+- **Task Assignments &amp; Estimates**:
+  - Email digest feature:
+    - Leila: 3 days of backend work
+    - Tom: 1 day of frontend work (once Leila's API is ready)
+  - Ana will write the test plan today, ready for review by Wednesday
+
+### Sprint 14 Commitments (44 points total)
+- **Pagination refactor** (8 pts) — Marcus, Leila
+- **Email digest** (5 pts) — Leila, Tom
+- **Auth token refresh** (3 pts) — Leila
+- **Dashboard chart improvements** (13 pts) — Tom
+- **Automated regression suite** (8 pts) — Ana
+- **Performance monitoring alerts** (7 pts) — Marcus
+
+### Important Deadlines
+- **Release date**: July 11
+- **All Sprint 14 work must be merged and QA-approved by**: July 9
+
+---
+
+This summary covers all discussion topics, decisions made, and action items with their owners in a structured bullet-point format with detailed sub-bullets.
 </pre>
 </div>
 </div>
@@ -4703,44 +4657,6 @@ async result: 6  (error=False)
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Running the Notebooks">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Running the Notebooks
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../multi_tool_registry/" class="md-footer__link md-footer__link--next" aria-label="Next: Multi-Tool Registry">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Multi-Tool Registry
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
